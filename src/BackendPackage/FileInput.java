@@ -26,7 +26,7 @@ public class FileInput {
     public String toString(){
         return "The path of the file is " + this.path;
     }
-    
+  //After this point I have no idea what I did  
     public void openFile(){
         File file = new File(this.path);
         Desktop desk = Desktop.getDesktop();
