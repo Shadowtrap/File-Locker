@@ -48,7 +48,7 @@ public class FileInput {
     public String toString(){
         return "The path of the file is " + this.path;
     }
-  //After this point I have no idea what I did  
+  //To the next Comment I have no idea what i did  
     public void openFile(){
         File file = new File(this.path);
         Desktop desk = Desktop.getDesktop();
@@ -61,7 +61,7 @@ public class FileInput {
             }
         }
     }
-    
+    //The next comment
     public void password(){
         String password = JOptionPane.showInputDialog("Input a password for file.");
         String password2 = "&!" + password + "&!";
