@@ -69,9 +69,13 @@ public class FileInput {
     }
     
     public void lockFile(){
+        File file = new File(this.path);
         password();
         this.fileLock = true;
-        
+        int dot = this.path.indexOf(".");
+        String noExt = this.path.substring(0, dot);
+        File newFile = new File(noExt + ".jet");
+        file.renameTo(newFile);
     }
     
     public void unlockFile(){
@@ -80,8 +84,17 @@ public class FileInput {
             int passwordLen = this.password.length();
             String actualPassword = this.password.substring(2,passwordLen-2);
             if(actualPassword.equals(userEntered)){
-                System.out.println("Correct");
                 this.fileLock = false;
+                int dot = this.path.indexOf(".");
+                String origExt = this.path.substring(dot);
+                String pathNoExt = this.path.substring(0,dot);
+                File oldFile = new File(pathNoExt + ".jet");
+                File newFile = new File (pathNoExt + origExt);
+                oldFile.renameTo(newFile);
+                
+                
+                
+                
             }
         }
         

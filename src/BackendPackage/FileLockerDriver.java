@@ -4,10 +4,11 @@ public class FileLockerDriver{
     
     public static void main(String args[]){
         
-        FileInput test = new FileInput(/*file path*/);
-        test.openFile();
+        FileInput test = new FileInput(/*some path*/);
+        
         test.lockFile();
         test.unlockFile();
+        //test.openFile();
         
     }
     
