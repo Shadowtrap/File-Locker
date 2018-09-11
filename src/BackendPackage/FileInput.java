@@ -1,14 +1,13 @@
 package BackendPackage;
 
-import java.awt.Desktop;
 import java.io.File;
 import javax.swing.JOptionPane;
-
 
 public class FileInput {
     private String path;
     private boolean fileLock;
     private String password;
+    private String origExt;
     
     public FileInput(){
         this.path = "na";
@@ -30,8 +29,12 @@ public class FileInput {
         this.fileLock = fileLock;
     }
     
-    private void setPassword(String path){
+    private void setPassword(String password){
         this.password = password;
+    }
+    
+    private void setOrigExt(String origExt){
+        this.origExt = origExt;
     }
     
     public String getPath(){
@@ -40,8 +43,11 @@ public class FileInput {
     public boolean getFileLock(){
         return this.fileLock;
     }
-    private String getPassword(String path){
+    private String getPassword(){
         return this.password;
+    }
+    private String getOrigExt(){
+        return this.origExt;
     }
     
     @Override
@@ -51,8 +57,7 @@ public class FileInput {
     
     public void password(){
         String password = JOptionPane.showInputDialog("Input a password for file.");
-        String password2 = "&!" + password + "&!";
-        this.password = password2;
+        this.password = password;
     }
     
     public void lockFile(){
@@ -60,31 +65,27 @@ public class FileInput {
         password();
         this.fileLock = true;
         int dot = this.path.indexOf(".");
+        origExt = this.path.substring(dot + 1);
         String noExt = this.path.substring(0, dot);
         File newFile = new File(noExt + ".jet");
         file.renameTo(newFile);
+        this.path = newFile.getPath();
     }
     
     public void unlockFile(){
         int dot = this.path.indexOf(".");
+        System.out.println(this.path);
         String ext = this.path.substring(dot + 1);
+        System.out.println(ext);
         if(ext.equals("jet")){
-            String userEntered = JOptionPane.showInputDialog("Input the password for the file");
-            int passwordLen = this.password.length();
-            String actualPassword = this.password.substring(2,passwordLen-2);
-            if(actualPassword.equals(userEntered)){
+            String userEntered = JOptionPane.showInputDialog("Input the password for the file");;
+            if(this.password.equals(userEntered)){
                 this.fileLock = false;
-                String origExt = this.path.substring(dot);
                 String pathNoExt = this.path.substring(0,dot);
                 File oldFile = new File(pathNoExt + ".jet");
-                File newFile = new File (pathNoExt + origExt);
+                File newFile = new File (pathNoExt + "." + origExt);
                 oldFile.renameTo(newFile);
-                
-                
-                
-                
             }
-        }
-        
+        }  
     }
 }

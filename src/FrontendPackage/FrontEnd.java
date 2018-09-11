@@ -21,6 +21,7 @@ public class FrontEnd extends javax.swing.JFrame {
      */
     
     private String path;
+    private FileInput fileTest;
     
     public FrontEnd() {
         initComponents();
@@ -193,8 +194,8 @@ public class FrontEnd extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        FileInput file = new FileInput(path);
-        file.lockFile();
+        fileTest = new FileInput(path);
+        fileTest.lockFile();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -218,8 +219,8 @@ public class FrontEnd extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        FileInput file = new FileInput(path);
-        file.unlockFile();
+        fileTest = new FileInput(path);
+        fileTest.unlockFile();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
