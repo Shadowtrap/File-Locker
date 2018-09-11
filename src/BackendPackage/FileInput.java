@@ -48,20 +48,7 @@ public class FileInput {
     public String toString(){
         return "The path of the file is " + this.path;
     }
-  //To the next Comment I have no idea what i did  
-    public void openFile(){
-        File file = new File(this.path);
-        Desktop desk = Desktop.getDesktop();
-        if(file.exists()){
-            try{
-                desk.open(file);
-            }
-            catch(Exception e){
-                
-            }
-        }
-    }
-    //The next comment
+    
     public void password(){
         String password = JOptionPane.showInputDialog("Input a password for file.");
         String password2 = "&!" + password + "&!";
@@ -79,13 +66,14 @@ public class FileInput {
     }
     
     public void unlockFile(){
-        if(this.fileLock == true){
+        int dot = this.path.indexOf(".");
+        String ext = this.path.substring(dot + 1);
+        if(ext.equals("jet")){
             String userEntered = JOptionPane.showInputDialog("Input the password for the file");
             int passwordLen = this.password.length();
             String actualPassword = this.password.substring(2,passwordLen-2);
             if(actualPassword.equals(userEntered)){
                 this.fileLock = false;
-                int dot = this.path.indexOf(".");
                 String origExt = this.path.substring(dot);
                 String pathNoExt = this.path.substring(0,dot);
                 File oldFile = new File(pathNoExt + ".jet");

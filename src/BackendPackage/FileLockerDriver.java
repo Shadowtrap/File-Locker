@@ -8,7 +8,6 @@ public class FileLockerDriver{
         
         test.lockFile();
         test.unlockFile();
-        //test.openFile();
         
     }
     
