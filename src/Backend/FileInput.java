@@ -67,28 +67,35 @@ public class FileInput {
         File file = new File(this.path);
         password();
         this.fileLock = true;
-        int dot = this.path.indexOf(".");
-        origExt = this.path.substring(dot + 1);
-        String noExt = this.path.substring(0, dot);
-        File newFile = new File(noExt + ".jet");
-        file.renameTo(newFile);
-        this.path = newFile.getPath();
+        for(int i = this.path.length() - 1; i >= 0; i-=1) {
+            char dot = this.path.charAt(i);
+            if (dot == '.') {
+                //int dot = this.path.indexOf(".");
+                origExt = this.path.substring(i + 1);
+                System.out.println(origExt);
+                String noExt = this.path.substring(0, i);
+                File newFile = new File(noExt + ".jet");
+                file.renameTo(newFile);
+                this.path = newFile.getPath();
+            }
+        }
     }
 
     public void unlockFile() {
-        int dot = this.path.indexOf(".");
-        System.out.println(this.path);
-        String ext = this.path.substring(dot + 1);
-        System.out.println(ext);
-        if (ext.equals("jet")) {
-            String userEntered = JOptionPane.showInputDialog("Input the password for the file");
-            ;
-            if (this.password.equals(userEntered)) {
-                this.fileLock = false;
-                String pathNoExt = this.path.substring(0, dot);
-                File oldFile = new File(pathNoExt + ".jet");
-                File newFile = new File(pathNoExt + "." + origExt);
-                oldFile.renameTo(newFile);
+        for(int i = this.path.length() - 1; i >= 0; i-=1) {
+            char dot = this.path.charAt(i);
+            if (dot == '.') {
+                String ext = this.path.substring(i + 1);
+                if (ext.equals("jet")) {
+                    String userEntered = JOptionPane.showInputDialog("Input the password for the file");
+                    if (this.password.equals(userEntered)) {
+                        this.fileLock = false;
+                        String pathNoExt = this.path.substring(0, i);
+                        File oldFile = new File(pathNoExt + ".jet");
+                        File newFile = new File(pathNoExt + "." + origExt);
+                        oldFile.renameTo(newFile);
+                    }
+                }
             }
         }
     }
