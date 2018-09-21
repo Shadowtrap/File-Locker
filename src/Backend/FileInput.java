@@ -100,3 +100,8 @@ public class FileInput {
         }
     }
 }
+
+
+//Could put security on system file that should not be touched WHATSOEVER
+    //Index of C:/ProgramFiles,ProgramFiles(x86),Windows,PerfLogs
+    //If equal to 1 give message not allowed to lock and ofc NOT LOCK
