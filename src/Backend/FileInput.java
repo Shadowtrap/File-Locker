@@ -64,42 +64,41 @@ public class FileInput {
     }
 
     public void lockFile() {
-        File file = new File(this.path);
+        File oldFile = new File(this.path);
         password();
         this.fileLock = true;
-        for(int i = this.path.length() - 1; i >= 0; i-=1) {
+        for(int i = this.path.length() - 1; i > this.path.length() - 7; i-=1) {
             char dot = this.path.charAt(i);
-            if (dot == '.') {
-                //int dot = this.path.indexOf(".");
+            if (dot == '.'){
                 origExt = this.path.substring(i + 1);
                 System.out.println(origExt);
-                String noExt = this.path.substring(0, i);
-                File newFile = new File(noExt + ".jet");
-                file.renameTo(newFile);
+                String noExt = this.path.substring(0, i + 1);
+                File newFile = new File(noExt + "jet");
+                oldFile.renameTo(newFile);
                 this.path = newFile.getPath();
             }
         }
     }
 
-    public void unlockFile() {
-        for(int i = this.path.length() - 1; i >= 0; i-=1) {
-            char dot = this.path.charAt(i);
-            if (dot == '.') {
-                String ext = this.path.substring(i + 1);
-                if (ext.equals("jet")) {
-                    String userEntered = JOptionPane.showInputDialog("Input the password for the file");
-                    if (this.password.equals(userEntered)) {
-                        this.fileLock = false;
-                        String pathNoExt = this.path.substring(0, i);
-                        File oldFile = new File(pathNoExt + ".jet");
-                        File newFile = new File(pathNoExt + "." + origExt);
-                        oldFile.renameTo(newFile);
+        public void unlockFile() {
+            for(int i = this.path.length() - 1; i > this.path.length() - 6; i-=1) {
+                char dot = this.path.charAt(i);
+                if (dot == '.') {
+                    String ext = this.path.substring(i + 1);
+                    if (ext.equals("jet")) {
+                        String userEntered = JOptionPane.showInputDialog("Input the password for the file");
+                        if (this.password.equals(userEntered)) {
+                            this.fileLock = false;
+                            String pathNoExt = this.path.substring(0, i);
+                            File oldFile = new File(pathNoExt + ".jet");
+                            File newFile = new File(pathNoExt + "." + origExt);
+                            oldFile.renameTo(newFile);
+                        }
                     }
                 }
             }
         }
     }
-}
 
 
 //Could put security on system file that should not be touched WHATSOEVER
