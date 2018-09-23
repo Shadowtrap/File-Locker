@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27d7f9bc-b806-41f6-8a78-69fe13a76d52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/File-Locker/Frontend/Frontend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Backend/FileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/FileInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/Frontend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Frontend.java" afterDir="false" />
-    </list>
+    <list default="true" id="27d7f9bc-b806-41f6-8a78-69fe13a76d52" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="C:\My-Installables\Java Projects\IntelliJ Projects\File-Locker\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,10 +48,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Backend/FileInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
+            <state relative-caret-position="816">
               <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -99,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Frontend/Frontend.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="191" column="73" selection-start-line="191" selection-start-column="73" selection-end-line="191" selection-end-column="73" />
+            <state relative-caret-position="307">
+              <caret line="184" column="73" selection-start-line="184" selection-start-column="73" selection-end-line="184" selection-end-column="73" />
               <folding>
                 <element signature="e#209#210#0" expanded="true" />
                 <element signature="e#241#242#0" expanded="true" />
@@ -111,6 +99,12 @@
                 <element signature="e#6987#7028#0" />
                 <element signature="method#jTextField1ActionPerformed#0;class#Frontend#0" />
                 <element signature="method#jButton2ActionPerformed#0;class#Frontend#0" />
+                <element signature="e#8085#8126#0" />
+                <element signature="method#jButton3ActionPerformed#0;class#Frontend#0" />
+                <element signature="e#8407#8448#0" />
+                <element signature="method#jTextField2ActionPerformed#0;class#Frontend#0" />
+                <element signature="method#jButton4ActionPerformed#0;class#Frontend#0" />
+                <element signature="e#9509#9550#0" />
                 <element signature="docComment;method#main#0;class#Frontend#0" />
                 <element signature="method#main#0;class#Frontend#0" />
               </folding>
@@ -305,7 +299,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31982476" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31982476" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -360,9 +354,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Backend/FileLockerDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Backend/TestFileCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Frontend/Frontend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="184" column="73" selection-start-line="184" selection-start-column="73" selection-end-line="184" selection-end-column="73" />
+          <folding>
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="docComment;method#initComponents#0;class#Frontend#0" />
+            <element signature="e#6987#7028#0" />
+            <element signature="method#jTextField1ActionPerformed#0;class#Frontend#0" />
+            <element signature="method#jButton2ActionPerformed#0;class#Frontend#0" />
+            <element signature="e#8085#8126#0" />
+            <element signature="method#jButton3ActionPerformed#0;class#Frontend#0" />
+            <element signature="e#8407#8448#0" />
+            <element signature="method#jTextField2ActionPerformed#0;class#Frontend#0" />
+            <element signature="method#jButton4ActionPerformed#0;class#Frontend#0" />
+            <element signature="e#9509#9550#0" />
+            <element signature="docComment;method#main#0;class#Frontend#0" />
+            <element signature="method#main#0;class#Frontend#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Backend/FileInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
+        <state relative-caret-position="816">
           <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -384,40 +418,6 @@
             <element signature="e#1055#1056#0" expanded="true" />
             <element signature="e#1101#1102#0" expanded="true" />
             <element signature="e#1162#1163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Backend/FileLockerDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Backend/TestFileCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Frontend/Frontend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="191" column="73" selection-start-line="191" selection-start-column="73" selection-end-line="191" selection-end-column="73" />
-          <folding>
-            <element signature="e#209#210#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="docComment;method#initComponents#0;class#Frontend#0" />
-            <element signature="e#6987#7028#0" />
-            <element signature="method#jTextField1ActionPerformed#0;class#Frontend#0" />
-            <element signature="method#jButton2ActionPerformed#0;class#Frontend#0" />
-            <element signature="docComment;method#main#0;class#Frontend#0" />
-            <element signature="method#main#0;class#Frontend#0" />
           </folding>
         </state>
       </provider>
