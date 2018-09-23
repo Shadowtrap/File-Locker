@@ -71,7 +71,6 @@ public class FileInput {
             char dot = this.path.charAt(i);
             if (dot == '.'){
                 origExt = this.path.substring(i + 1);
-                System.out.println(origExt);
                 String noExt = this.path.substring(0, i + 1);
                 File newFile = new File(noExt + "jet");
                 oldFile.renameTo(newFile);

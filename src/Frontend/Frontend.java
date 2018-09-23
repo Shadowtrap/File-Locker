@@ -1,24 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Frontend;
 
 import Backend.FileInput;
-
 import javax.swing.*;
 import java.io.File;
 
-/**
- *
- * @author Arnav
- */
 public class Frontend extends JFrame {
-
-    /**
-     * Creates new form FrontEnd
-     */
 
     private String path;
     private FileInput fileTest;
@@ -178,13 +164,17 @@ public class Frontend extends JFrame {
         final JFileChooser fc = new JFileChooser();
         fc.showOpenDialog(fc);
         File selectedFile = fc.getSelectedFile();
-        path = selectedFile.getPath();
-        int dot = path.indexOf(".");
-        String pathExt = path.substring(dot+1);
-        if(!pathExt.equals("jet"))
-            jTextField1.setText(path);
-        else{
-            JOptionPane.showMessageDialog(null, "File is not locked yet.");
+        this.path = selectedFile.getPath();
+        for(int i = this.path.length() - 1; i > this.path.length() - 7; i-=1){
+            char dot = this.path.charAt(i);
+            if(dot == '.') {
+                String pathExt = this.path.substring(i + 1);
+                if (!pathExt.equals("jet"))
+                    jTextField1.setText(path);
+                else {
+                    JOptionPane.showMessageDialog(null, "File is not locked yet.");
+                }
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -194,8 +184,9 @@ public class Frontend extends JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        fileTest = new FileInput(path);
+        fileTest = new FileInput(this.path);
         fileTest.lockFile();
+        this.path = fileTest.getPath();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -203,13 +194,17 @@ public class Frontend extends JFrame {
         final JFileChooser fc = new JFileChooser();
         fc.showOpenDialog(fc);
         File selectedFile = fc.getSelectedFile();
-        path = selectedFile.getPath();
-        int dot = path.indexOf(".");
-        String pathExt = path.substring(dot+1);
-        if(pathExt.equals("jet"))
-            jTextField2.setText(path);
-        else{
-            JOptionPane.showMessageDialog(null, "File is not locked.");
+        this.path = selectedFile.getPath();
+        for(int i = this.path.length() - 1; i > this.path.length() - 6; i-=1) {
+            char dot = this.path.charAt(i);
+            if(dot == '.'){
+                String pathExt = this.path.substring(i + 1);
+                if (pathExt.equals("jet"))
+                    jTextField2.setText(this.path);
+                else {
+                    JOptionPane.showMessageDialog(null, "File is not locked.");
+                }
+            }
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -219,7 +214,7 @@ public class Frontend extends JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        fileTest = new FileInput(path);
+        fileTest.setPath((this.path));
         fileTest.unlockFile();
     }//GEN-LAST:event_jButton4ActionPerformed
 
