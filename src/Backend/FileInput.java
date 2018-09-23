@@ -63,7 +63,24 @@ public class FileInput {
         this.password = password;
     }
 
+    public void systemFileSecure(){
+        String windows = "C:\\Windows";
+        String programFiles1 = "C:\\Program Files (x86)";
+        String programFiles2 = "C:\\Program Files";
+        String perfLogs = "C:\\PerfLogs";
+        int indW = this.path.indexOf(windows);
+        int indPF1 = this.path.indexOf(programFiles1);
+        int indPF2 = this.path.indexOf(programFiles2);
+        int indPL = this.path.indexOf(perfLogs);
+        System.out.println(indW);
+        if(indW == 0 || indPF1 == 0 || indPF2 == 0 || indPL == 0){
+            JOptionPane.showMessageDialog(null, "You are not allowed to modify this file.");
+            this.path = null;
+        }
+    }
+
     public void lockFile() {
+        systemFileSecure();
         File oldFile = new File(this.path);
         password();
         this.fileLock = true;
@@ -80,6 +97,7 @@ public class FileInput {
     }
 
         public void unlockFile() {
+            systemFileSecure();
             for(int i = this.path.length() - 1; i > this.path.length() - 6; i-=1) {
                 char dot = this.path.charAt(i);
                 if (dot == '.') {
