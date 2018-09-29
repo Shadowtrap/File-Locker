@@ -7,7 +7,7 @@ import java.io.File;
 public class Frontend extends JFrame {
 
     private String path;
-    private FileInput fileTest;
+    private FileInput fileTest = new FileInput(this.path);
 
     public Frontend() {
         initComponents();
@@ -184,9 +184,9 @@ public class Frontend extends JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        fileTest = new FileInput(this.path);
+        fileTest.setPath(this.path);
         fileTest.lockFile();
-        this.path = fileTest.getPath();
+        //this.path = fileTest.getPath();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -194,17 +194,12 @@ public class Frontend extends JFrame {
         final JFileChooser fc = new JFileChooser();
         fc.showOpenDialog(fc);
         File selectedFile = fc.getSelectedFile();
-        this.path = selectedFile.getPath();
-        for(int i = this.path.length() - 1; i > this.path.length() - 6; i-=1) {
-            char dot = this.path.charAt(i);
-            if(dot == '.'){
-                String pathExt = this.path.substring(i + 1);
-                if (pathExt.equals("jet"))
-                    jTextField2.setText(this.path);
-                else {
-                    JOptionPane.showMessageDialog(null, "File is not locked.");
-                }
-            }
+        if (selectedFile.getPath().indexOf(".jet") != -1) {
+            jTextField2.setText(selectedFile.getPath());
+            this.path = selectedFile.getPath();
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "File is not locked.");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -214,7 +209,8 @@ public class Frontend extends JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        fileTest.setPath((this.path));
+        String path = this.path;
+        fileTest.setPath(path);
         fileTest.unlockFile();
     }//GEN-LAST:event_jButton4ActionPerformed
 

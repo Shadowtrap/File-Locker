@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="27d7f9bc-b806-41f6-8a78-69fe13a76d52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/File-Locker/Backend/FileInput.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Backend/FileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/FileInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Backend/FileLockerDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/FileLockerDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Frontend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Frontend.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="C:\My-Installables\Java Projects\IntelliJ Projects\File-Locker\.idea\shelf/" />
@@ -19,14 +18,15 @@
     <session id="-1178572151">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.58" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,12 +41,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2432" />
+          <entry key="java" value="4248" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2432" />
+          <entry key="JAVA" value="4248" />
         </counts>
       </usages-collector>
     </session>
@@ -56,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Backend/FileInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+            <state relative-caret-position="1280">
+              <caret line="122" column="19" selection-start-line="122" selection-start-column="19" selection-end-line="122" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#473#474#0" expanded="true" />
@@ -84,35 +84,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Backend/FileLockerDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Frontend/Frontend.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="184" column="73" selection-start-line="184" selection-start-column="73" selection-end-line="184" selection-end-column="73" />
+            <state relative-caret-position="422">
+              <caret line="198" column="47" selection-start-line="198" selection-start-column="47" selection-end-line="198" selection-end-column="47" />
               <folding>
                 <element signature="e#209#210#0" expanded="true" />
                 <element signature="e#241#242#0" expanded="true" />
                 <element signature="docComment;method#initComponents#0;class#Frontend#0" />
                 <element signature="method#jButton1ActionPerformed#0;class#Frontend#0" />
                 <element signature="e#6987#7028#0" />
-                <element signature="method#jTextField1ActionPerformed#0;class#Frontend#0" />
-                <element signature="method#jButton2ActionPerformed#0;class#Frontend#0" />
-                <element signature="e#8085#8126#0" />
-                <element signature="method#jButton3ActionPerformed#0;class#Frontend#0" />
-                <element signature="e#8407#8448#0" />
+                <element signature="e#7828#7872#0" />
                 <element signature="method#jTextField2ActionPerformed#0;class#Frontend#0" />
-                <element signature="method#jButton4ActionPerformed#0;class#Frontend#0" />
-                <element signature="e#9509#9550#0" />
                 <element signature="docComment;method#main#0;class#Frontend#0" />
                 <element signature="method#main#0;class#Frontend#0" />
+                <element signature="e#10970#10971#0" expanded="true" />
+                <element signature="e#11033#11034#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Backend/TestFileCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="391">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,6 +129,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>orig</find>
+      <find>System.out</find>
       <find>System.out.println(</find>
     </findStrings>
   </component>
@@ -152,57 +140,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Backend/TestFileCreator.java" />
-        <option value="$PROJECT_DIR$/src/Frontend/Frontend.java" />
         <option value="$PROJECT_DIR$/src/Backend/FileLockerDriver.java" />
+        <option value="$PROJECT_DIR$/src/Frontend/Frontend.java" />
         <option value="$PROJECT_DIR$/src/Backend/FileInput.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="899" />
+    <option name="y" value="-13" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="File-Locker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="File-Locker" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="File-Locker" type="58d84e3e:PackageViewProjectNode" />
-              <item name="File-Locker" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="File-Locker" type="58d84e3e:PackageViewProjectNode" />
-              <item name="File-Locker" type="616d4139:PackageViewModuleNode" />
-              <item name="Backend" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="File-Locker" type="58d84e3e:PackageViewProjectNode" />
-              <item name="File-Locker" type="616d4139:PackageViewModuleNode" />
-              <item name="Frontend" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -267,8 +222,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Frontend" />
-        <item itemvalue="Application.FileLockerDriver" />
         <item itemvalue="Application.TestFileCreator" />
+        <item itemvalue="Application.FileLockerDriver" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +250,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.20787746" />
@@ -305,7 +260,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31982476" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34273317" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -360,30 +315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Frontend/Frontend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="184" column="73" selection-start-line="184" selection-start-column="73" selection-end-line="184" selection-end-column="73" />
-          <folding>
-            <element signature="e#209#210#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="docComment;method#initComponents#0;class#Frontend#0" />
-            <element signature="method#jButton1ActionPerformed#0;class#Frontend#0" />
-            <element signature="e#6987#7028#0" />
-            <element signature="method#jTextField1ActionPerformed#0;class#Frontend#0" />
-            <element signature="method#jButton2ActionPerformed#0;class#Frontend#0" />
-            <element signature="e#8085#8126#0" />
-            <element signature="method#jButton3ActionPerformed#0;class#Frontend#0" />
-            <element signature="e#8407#8448#0" />
-            <element signature="method#jTextField2ActionPerformed#0;class#Frontend#0" />
-            <element signature="method#jButton4ActionPerformed#0;class#Frontend#0" />
-            <element signature="e#9509#9550#0" />
-            <element signature="docComment;method#main#0;class#Frontend#0" />
-            <element signature="method#main#0;class#Frontend#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Backend/FileLockerDriver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -391,10 +322,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Frontend/Frontend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="198" column="47" selection-start-line="198" selection-start-column="47" selection-end-line="198" selection-end-column="47" />
+          <folding>
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="docComment;method#initComponents#0;class#Frontend#0" />
+            <element signature="method#jButton1ActionPerformed#0;class#Frontend#0" />
+            <element signature="e#6987#7028#0" />
+            <element signature="e#7828#7872#0" />
+            <element signature="method#jTextField2ActionPerformed#0;class#Frontend#0" />
+            <element signature="docComment;method#main#0;class#Frontend#0" />
+            <element signature="method#main#0;class#Frontend#0" />
+            <element signature="e#10970#10971#0" expanded="true" />
+            <element signature="e#11033#11034#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Backend/TestFileCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -403,8 +354,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Backend/FileInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+        <state relative-caret-position="1280">
+          <caret line="122" column="19" selection-start-line="122" selection-start-column="19" selection-end-line="122" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#473#474#0" expanded="true" />

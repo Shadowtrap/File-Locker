@@ -1,7 +1,7 @@
 package Backend;
 
 import javax.swing.*;
-import java.io.File;
+import java.io.*;
 
 public class FileInput {
     private String path;
@@ -63,6 +63,45 @@ public class FileInput {
         this.password = password;
     }
 
+    public void metaFileWriter(){
+        int lastSlash = this.path.lastIndexOf("\\");
+        String fileName = this.path.substring(lastSlash + 1);
+        int dot = fileName.indexOf(".");
+        String fileNameNoExt = fileName.substring(0, dot);
+        String pathNoFile = this.path.substring(0, lastSlash + 1);
+        File metaFile = new File(pathNoFile + "##" + fileNameNoExt + ".txt");
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter(metaFile));
+            bw.write(this.password + "!!!!@" + this.origExt);
+            bw.close();
+        }
+        catch(Exception e){
+            System.out.println("Did not work.");
+        }
+
+    }
+
+    public String metaFileReader(){
+        String passwordExtCheck = "";
+        if(this.path.indexOf(".jet") != -1) {
+            int lastSlash = this.path.lastIndexOf("\\");
+            String fileName = this.path.substring(lastSlash + 1);
+            int dot = fileName.indexOf(".");
+            String fileNameNoExt = fileName.substring(0, dot);
+            String pathNoFile = this.path.substring(0, lastSlash + 1);
+            File metaFile = new File(pathNoFile + "##" + fileNameNoExt + ".txt");
+            try {
+                BufferedReader br = new BufferedReader(new FileReader(metaFile));
+                passwordExtCheck = br.readLine();
+
+            } catch (Exception e) {
+                System.out.println("Could not read.");
+            }
+        }
+        return passwordExtCheck;
+
+    }
+
     public void systemFileSecure(){
         String windows = "C:\\Windows";
         String programFiles1 = "C:\\Program Files (x86)";
@@ -72,7 +111,6 @@ public class FileInput {
         int indPF1 = this.path.indexOf(programFiles1);
         int indPF2 = this.path.indexOf(programFiles2);
         int indPL = this.path.indexOf(perfLogs);
-        System.out.println(indW);
         if(indW == 0 || indPF1 == 0 || indPF2 == 0 || indPL == 0){
             JOptionPane.showMessageDialog(null, "You are not allowed to modify this file.");
             this.path = null;
@@ -88,9 +126,11 @@ public class FileInput {
             char dot = this.path.charAt(i);
             if (dot == '.'){
                 origExt = this.path.substring(i + 1);
+                System.out.println(origExt);
                 String noExt = this.path.substring(0, i + 1);
                 File newFile = new File(noExt + "jet");
                 oldFile.renameTo(newFile);
+                metaFileWriter();
                 this.path = newFile.getPath();
             }
         }
@@ -104,11 +144,15 @@ public class FileInput {
                     String ext = this.path.substring(i + 1);
                     if (ext.equals("jet")) {
                         String userEntered = JOptionPane.showInputDialog("Input the password for the file");
-                        if (this.password.equals(userEntered)) {
+                        int seperator = metaFileReader().indexOf("!!!!@");
+                        String  extCheckIns = metaFileReader().substring(seperator + 5);
+                        String passwordCheckIns = metaFileReader().substring(0,seperator);
+                        if (passwordCheckIns.equals(userEntered)) {
                             this.fileLock = false;
                             String pathNoExt = this.path.substring(0, i);
                             File oldFile = new File(pathNoExt + ".jet");
-                            File newFile = new File(pathNoExt + "." + origExt);
+                            System.out.println(extCheckIns);
+                            File newFile = new File(pathNoExt + "." + extCheckIns);
                             oldFile.renameTo(newFile);
                         }
                     }
